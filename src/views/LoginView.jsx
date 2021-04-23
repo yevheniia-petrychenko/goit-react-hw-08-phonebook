@@ -4,13 +4,18 @@ import { logIn } from '../redux/auth/auth-operations';
 
 const styles = {
   form: {
-    width: 320,
+    margin: 'auto',
+    padding: 10,
+    border: '2px solid',
+    borderRadius: 5,
+    width: 450,
   },
   label: {
     display: 'flex',
     flexDirection: 'column',
     marginBottom: 15,
   },
+  btn: {},
 };
 
 class LoginView extends Component {
@@ -33,7 +38,7 @@ class LoginView extends Component {
     const { email, password } = this.state;
     return (
       <div>
-        <h1>Login Page</h1>
+        <h1>Please log in</h1>
         <form onSubmit={this.handleSubmit} style={styles.form}>
           <label style={styles.label}>
             E-mail
@@ -54,7 +59,9 @@ class LoginView extends Component {
               onChange={this.handleChange}
             />
           </label>
-          <button type="submit">LogIn</button>
+          <button type="submit" style={styles.btn}>
+            LogIn
+          </button>
         </form>
       </div>
     );

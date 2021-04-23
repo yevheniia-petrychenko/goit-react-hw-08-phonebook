@@ -4,7 +4,11 @@ import { register } from '../redux/auth/auth-operations';
 
 const styles = {
   form: {
-    width: 320,
+    margin: 'auto',
+    padding: 10,
+    border: '2px solid',
+    borderRadius: 5,
+    width: 450,
   },
   label: {
     display: 'flex',
@@ -35,7 +39,7 @@ class RegisterView extends Component {
 
     return (
       <div>
-        <h1>Registration page</h1>
+        <h1>Please sighn up</h1>
         <form onSubmit={this.handleSubmit} style={styles.form}>
           <label style={styles.label}>
             Name

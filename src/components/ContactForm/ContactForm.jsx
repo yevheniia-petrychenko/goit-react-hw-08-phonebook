@@ -51,7 +51,7 @@ class ContactForm extends Component {
     return (
       <div>
         <form className="form" onSubmit={this.handleSubmit}>
-          <label>
+          <label className="label">
             Name
             <input
               type="text"
@@ -61,7 +61,7 @@ class ContactForm extends Component {
             />
           </label>
 
-          <label>
+          <label className="label">
             Number
             <input
               type="text"

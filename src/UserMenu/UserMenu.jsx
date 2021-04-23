@@ -14,12 +14,21 @@ const styles = {
     fontWeight: 700,
     marginRihgt: 17,
   },
+  btn: {
+    marginLeft: 17,
+    padding: 5,
+    borderRadius: 5,
+    fontSize: 14,
+    marginRight: 12,
+    // cursor: pointer,
+  },
 };
 
 const UserMenu = ({ avatar, name, onLogout }) => (
   <div style={styles.container}>
-    <span style={styles.name}>Welcome {name}</span>
-    <button type="button" onClick={onLogout}>
+    <span style={styles.name}>Welcome</span>
+    <span style={styles.name}>{name}</span>
+    <button type="button" style={styles.btn} onClick={onLogout}>
       LogOut
     </button>
   </div>

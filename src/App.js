@@ -3,7 +3,7 @@ import { Switch, Route } from 'react-router-dom';
 import Spiner from './components/spiner/spiner';
 import { getCurrentUser } from './redux/auth/auth-operations';
 import AppBar from './UserMenu/AppBar';
-// import PrivateRoute from './UserMenu/PrivateRoute';
+import PrivateRoute from './UserMenu/PrivateRoute';
 import PublicRoute from './UserMenu/PublicRoute';
 // import { render } from '@testing-library/react';
 import { connect } from 'react-redux';
@@ -36,7 +36,7 @@ class App extends Component {
               redirectTo="/contacts"
               component={LoginView}
             />
-            <Route path="/contacts" component={ContactsView} />
+            <PrivateRoute path="/contacts" component={ContactsView} />
           </Switch>
         </Suspense>
       </>

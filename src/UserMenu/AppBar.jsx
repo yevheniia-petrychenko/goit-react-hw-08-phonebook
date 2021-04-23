@@ -26,4 +26,4 @@ const mapStateToProps = state => {
   };
 };
 
-export default connect(null, mapStateToProps)(AppBar);
+export default connect(mapStateToProps, null)(AppBar);
